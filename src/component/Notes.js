@@ -46,7 +46,7 @@ const Notes = () => {
       <div
         className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -134,7 +134,7 @@ const Notes = () => {
       </div>
 
       <h1>Your Notes</h1>
-      {note.map((notes) => {
+      {Object.values(note).map((notes) => {
         return (
           <Noteitem
             key={notes._id}

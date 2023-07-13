@@ -24,7 +24,7 @@ router.post('/addNotes',fetchUser,[
     const result = validationResult(req);
     if (!result.isEmpty()) {
       return res.status(400).json({result:result.array()});
-    }
+    }   
     const note=new Notes({
        title,description,tag,user:req.user.id
     })
